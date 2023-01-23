@@ -1,0 +1,16 @@
+:root {
+    --main-bg-color: gray;
+}
+
+.max-width {
+    max-width: 1024;
+    width: 100%;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}

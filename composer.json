@@ -11,5 +11,7 @@
             "email": "edson.tibo@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.5"
+    }
 }
