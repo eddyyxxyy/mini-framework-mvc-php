@@ -1,0 +1,15 @@
+{
+    "name": "eddyxide/mini-framework-mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edson Pimenta",
+            "email": "edson.tibo@gmail.com"
+        }
+    ],
+    "require": {}
+}
