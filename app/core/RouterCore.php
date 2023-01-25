@@ -44,6 +44,13 @@ class RouterCore
         $this->_method = $_SERVER['REQUEST_METHOD'];
         $uri = $_SERVER['REQUEST_URI'];
 
+        if (strpos($uri, '?')) {
+            $uri = mb_substr(
+                $uri, 0,
+                strpos($uri, '?')
+            );
+        }
+
         $ex = explode('/', $uri);
 
         $uri = $this->_normalizeURI($ex);
