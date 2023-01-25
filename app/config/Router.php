@@ -21,4 +21,6 @@ $this->_get('/about-us', 'PagesController@aboutUs');
 
 $this->_get('/meta', 'PagesController@meta');
 
+$this->_get('/search', 'SearchController@search');
+
 
