@@ -89,9 +89,45 @@ class RouterCore
                 if (is_callable($get['call'])) {
                     $get['call']();
                     break;
+                } else {
+                    $this->_executeController($get['call']);
                 }
             }
         }
+    }
+
+    private function _executeController($get)
+    {
+        $ex = explode('@', $get);
+        if (!isset($ex[0]) || !isset($ex[1])) {
+            (new \app\controller\MessageController)->message(
+                'Page not found',
+                'Controller or method not found: ' . $get,
+                404
+            );
+            return;
+        }
+
+        $cont = 'app\\controller\\' . $ex[0];
+        if (!class_exists($cont)) {
+            (new \app\controller\MessageController)->message(
+                'Page not found',
+                'Controller not found: ' . $get,
+                404
+            );
+            return;
+        }
+
+        if (!method_exists($cont, $ex[1])) {
+            (new \app\controller\MessageController)->message(
+                'Page not found',
+                'Method not found: ' . $get,
+                404
+            );
+            return;
+        }
+
+        call_user_func_array([new $cont, $ex[1]], []);
     }
 
     private function _normalizeURI($arr)
