@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{BASE}}category/">Categories</a>
+          <a class="nav-link" href="{{BASE}}zipcode/">Zipcode</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{BASE}}about-us/">About Us</a>
