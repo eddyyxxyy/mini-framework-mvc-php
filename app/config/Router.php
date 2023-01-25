@@ -11,18 +11,14 @@
  * @link     https://github.com/eddyyxxyy/mini-framework-mvc-php
  */
 
-$this->_get(
-    '/',
-    function () {
-        (new \app\controller\TestController)->index();
-    }
-);
+$this->_get('/', 'PagesController@home');
 
-$this->_get('/category', 'TestController@seta');
+$this->_get('/home', 'PagesController@home');
 
-$this->_get(
-    '/about/test',
-    function () {
-        echo 'Estou na about/test!';
-    }
-);
+$this->_get('/zipcode', 'PagesController@zipcode');
+
+$this->_get('/about-us', 'PagesController@aboutUs');
+
+$this->_get('/meta', 'PagesController@meta');
+
+
