@@ -11,16 +11,16 @@
  * @link     https://github.com/eddyyxxyy/mini-framework-mvc-php
  */
 
-$this->get(
+$this->_get(
     '/',
     function () {
         (new \app\controller\TestController)->index();
     }
 );
 
-$this->get('/category', 'TestController@seta');
+$this->_get('/category', 'TestController@seta');
 
-$this->get(
+$this->_get(
     '/about/test',
     function () {
         echo 'Estou na about/test!';
