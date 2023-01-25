@@ -22,8 +22,8 @@
           <a class="nav-link" href="{{BASE}}meta/">Meta</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search">
+      <form class="d-flex" method="get" action="{{BASE}}search/">
+        <input class="form-control me-sm-2" type="text" placeholder="Search" name="sh">
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
