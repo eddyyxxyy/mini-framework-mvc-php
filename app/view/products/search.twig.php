@@ -3,7 +3,7 @@
 {% block title %}Search - Mini Framework{% endblock %}
 
 {% block body %}
-<div class="center-screen max-width padding bg-white">
+<div class="center-screen max-width padding bg-white mt-3">
     <h1>Search</h1>
 
     <p>Showing results for: <span class="font-weight-bold">{{param}}</span></p>

@@ -3,7 +3,7 @@
 {% block title %}New Product - Mini Framework{% endblock %}
 
 {% block body %}
-<div class="center-screen max-width padding bg-white">
+<div class="center-screen max-width padding bg-white mt-3">
     <h1>New Product</h1>
     <hr>
 

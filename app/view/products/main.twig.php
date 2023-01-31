@@ -3,7 +3,7 @@
 {% block title %}Products - Mini Framework{% endblock %}
 
 {% block body %}
-<div class="center-screen max-width padding bg-white">
+<div class="center-screen max-width padding bg-white mt-3">
     <h1>Products</h1>
 
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
