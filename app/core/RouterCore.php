@@ -74,15 +74,23 @@ class RouterCore
         ];
     }
 
+    private function _post($router, $call)
+    {
+        $this->_getArr[] = [
+            'router' => $router,
+            'call' => $call,
+        ];
+    }
+
     private function _execute()
     {
         switch($this->_method) {
         case 'GET':
             $this->_executeGet();
-            break;
+            return;
         case 'POST':
-
-            break;
+            $this->_executePost();
+            return;
         }
     }
 
@@ -95,10 +103,26 @@ class RouterCore
             if ($r == $this->_uri) {
                 if (is_callable($get['call'])) {
                     $get['call']();
-                    break;
-                } else {
-                    $this->_executeController($get['call']);
+                    return;
                 }
+                $this->_executeController($get['call']);
+            }
+        }
+    }
+
+
+    private function _executePost()
+    {
+        foreach ($this->_getArr as $post) {
+
+            $r = substr($post['router'], 1);
+
+            if ($r == $this->_uri) {
+                if (is_callable($post['call'])) {
+                    $post['call']();
+                    return;
+                }
+                $this->_executeController($post['call']);
             }
         }
     }
