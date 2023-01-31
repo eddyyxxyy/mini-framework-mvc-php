@@ -60,7 +60,7 @@ class ProductsController extends Controller
     {
         return (object)[
             'id'          => Input::get('id', FILTER_SANITIZE_NUMBER_INT),
-            'title'       => Input::post('txtTitle'),
+            'name'       => Input::post('txtName'),
             'image'       => Input::post('txtImage'),
             'description' => Input::post('txtDescription'),
         ];
