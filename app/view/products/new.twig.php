@@ -10,8 +10,8 @@
     <form action="{{BASE}}insert-product" method="post">
         <fieldset>
             <div class="form-group">
-                <label for="txtTitle" class="form-label mt-3">Name</label>
-                <input type="text" class="form-control mb-3" name="txtTitle" id="txtTitle" aria-describedby="textHelp" placeholder="Enter product's name..." required>
+                <label for="txtName" class="form-label mt-3">Name</label>
+                <input type="text" class="form-control mb-3" name="txtName" id="txtName" aria-describedby="textHelp" placeholder="Enter product's name..." required>
             </div>
             <div class="form-group">
                 <label for="txtImage" class="form-label">Image</label>
