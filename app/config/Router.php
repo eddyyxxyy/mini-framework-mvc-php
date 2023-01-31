@@ -12,15 +12,12 @@
  */
 
 $this->_get('/', 'PagesController@home');
-
 $this->_get('/home', 'PagesController@home');
-
-$this->_get('/zipcode', 'PagesController@zipcode');
-
 $this->_get('/about-us', 'PagesController@aboutUs');
-
 $this->_get('/meta', 'PagesController@meta');
 
-$this->_get('/search', 'SearchController@search');
+$this->_get('/products', 'ProductsController@index');
+$this->_get('/new-product', 'ProductsController@new');
+$this->_post('/insert-product', 'ProductsController@insert');
 
-
+$this->_get('/search', 'ProductsController@search');
