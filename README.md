@@ -1,7 +1,7 @@
 # Mini Framework MVC
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Tags: Latest by date](https://img.shields.io/github/v/tag/eddyyxxyy/plum-blog)
+![Tags: Latest by date](https://img.shields.io/github/v/tag/eddyyxxyy/mini-framework-mvc-php)
 
 
 Blog desenvolvido em PHP nativo para fins de estudo e fixação dos conceitos e convenções do MVC.
