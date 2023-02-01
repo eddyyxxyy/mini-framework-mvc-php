@@ -41,4 +41,19 @@ class Controller
         $twig->addGlobal('BASE', BASE);
         echo $twig->render($view . '.twig.php', $params);
     }
+
+    public function showMessage(
+        string $title, string $description, string $link = null, int $httpCode = 200
+    ) {
+        http_response_code($httpCode);
+
+        $this->load(
+            'partials/message',
+            [
+                'title' => $title,
+                'description' => $description,
+                'link' => $link,
+            ]
+        );
+    }
 }
