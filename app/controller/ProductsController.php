@@ -3,10 +3,18 @@
 namespace app\controller;
 
 use app\core\Controller;
+use app\model\ProductModel;
 use app\classes\Input;
 
 class ProductsController extends Controller
 {
+    private $_productModel;
+
+    public function __construct()
+    {
+        $this->_productModel = new ProductModel();
+    }
+
     /**
      * Carrega a página principal
      *
@@ -35,9 +43,25 @@ class ProductsController extends Controller
      */
     public function insert()
     {
-        $params = $this->getInput();
+        $product = $this->getInput();
 
-        dd($params);
+        if (!$this->_validate($product, false)) {
+            return $this->showMessage(
+                'Invalid form...',
+                'Informed data is invalid.',
+                BASE . 'new-product/',
+                422
+            );
+        }
+
+        $result = $this->_productModel->insert($product);
+
+        if ($result <= 0) {
+            echo 'Error when trying to insert product.';
+            die;
+        }
+
+        redirect(BASE . 'edit-product/' . $result);
     }
 
     /**
@@ -64,5 +88,26 @@ class ProductsController extends Controller
             'image'       => Input::post('txtImage'),
             'description' => Input::post('txtDescription'),
         ];
+    }
+
+    private function _validate(Object $product, bool $validateId = true)
+    {
+        if ($validateId && $product->id <= 0) {
+            return false;
+        }
+
+        if (strlen($product->name) < 3) {
+            return false;
+        }
+
+        if (strlen($product->image) < 5) {
+            return false;
+        }
+
+        if (strlen($product->description) < 10) {
+            return false;
+        }
+
+        return true;
     }
 }
