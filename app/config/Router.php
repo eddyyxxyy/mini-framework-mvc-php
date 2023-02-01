@@ -19,5 +19,6 @@ $this->_get('/meta', 'PagesController@meta');
 $this->_get('/products', 'ProductsController@index');
 $this->_get('/new-product', 'ProductsController@new');
 $this->_post('/insert-product', 'ProductsController@insert');
+$this->_post('/edit-product', 'ProductsController@edit');
 
 $this->_get('/search', 'ProductsController@search');
