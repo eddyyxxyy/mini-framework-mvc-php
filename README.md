@@ -1,4 +1,4 @@
-# Mini Framework MVC
+# Mini Framework MVC (Projeto descontinuado)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Tags: Latest by date](https://img.shields.io/github/v/tag/eddyyxxyy/mini-framework-mvc-php)
@@ -17,11 +17,6 @@ Blog desenvolvido em PHP nativo para fins de estudo e fixação dos conceitos e 
 </p>
 
 E o tema Lux do Bootswatch.
-
-## Previews
-
-> ### Homepage
-> ![Home Page](./preview/home_page.png)
 
 ## Licença
 
